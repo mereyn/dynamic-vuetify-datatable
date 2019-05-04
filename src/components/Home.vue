@@ -6,7 +6,7 @@
         <p class="subheading font-weight-regular">
           Generate Dynamic Vuetify Data Table
           <br>Source Code
-          <a href="https://community.vuetifyjs.com" target="_blank">Github</a>
+          <a href="https://github.com/mereyn/dynamic-vuetify-datatable" target="_blank">Github</a>
         </p>
       </v-flex>
     </v-layout>
