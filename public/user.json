@@ -1,0 +1,17 @@
+[
+  {
+    "fname": "John",
+    "lname": "Doe",
+    "url": "http://google.com"
+  },
+  {
+    "fname": "Eclair",
+    "lname": "Golang",
+    "url": "https://golang.org"
+  },
+  {
+    "fname": "Gaga",
+    "lname": "Az",
+    "url": "http://facebook.com"
+  }
+]
