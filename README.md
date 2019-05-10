@@ -82,6 +82,7 @@ export default {
 ```
 
 ### Result
+
 https://dynamic-vuetify-datatable.firebaseapp.com/
 
 ### Customize configuration
