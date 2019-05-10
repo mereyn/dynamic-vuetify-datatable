@@ -81,6 +81,9 @@ export default {
 <table-edify :columns="headers"></table-edify>
 ```
 
+### Result
+https://dynamic-vuetify-datatable.firebaseapp.com/
+
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
