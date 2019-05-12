@@ -3,6 +3,7 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
+
 jobs:
   build:
     docker:
@@ -41,26 +42,26 @@ jobs:
       # run tests!
       - run: yarn test
 
-deploy-job:
-  docker:
-    - image: circleci/node:10.8.0
-  working_directory: ~/repo
-  steps:
-    - restore_cache:
-        keys:
-          - v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
-    - run:
-        name: show directory
-        command: pwd
-    - run:
-        name: Install Firebase
-        command: npm install --save-dev firebase-tools
-    - run:
-        name: look in directory
-        command: ls -ltr
-    - run:
-        name: Deploy Master to firebase
-        command: npm run firebase-deploy -- --token=$FIREBASE_DEPLOY_TOKEN
+  deploy-job:
+    docker:
+      - image: circleci/node:10.8.0
+    working_directory: ~/repo
+    steps:
+      - restore_cache:
+          keys:
+            - v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+      - run:
+          name: show directory
+          command: pwd
+      - run:
+          name: Install Firebase
+          command: npm install --save-dev firebase-tools
+      - run:
+          name: look in directory
+          command: ls -ltr
+      - run:
+          name: Deploy Master to firebase
+          command: npm run firebase-deploy -- --token=$FIREBASE_DEPLOY_TOKEN
 
 workflows:
   version: 2
