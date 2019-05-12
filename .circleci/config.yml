@@ -59,7 +59,7 @@ deploy-job:
         name: look in directory
         command: ls -ltr
     - run:
-        name: Deploy Master to Firebase
+        name: Deploy Master to firebase
         command: npm run firebase-deploy -- --token=$FIREBASE_DEPLOY_TOKEN
 
 workflows:
